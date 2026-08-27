@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TerminalOS — Standalone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Login window (top-left corner). Credentials in README.md -->
+  <div id="login-overlay">
+    <div id="login-window">
+      <div class="titlebar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="title">TerminalOS — Login</span>
+      </div>
+      <form id="login-form">
+        <div class="row"><label>USER:</label><input id="login-user" autocomplete="off" autocapitalize="off" spellcheck="false" /></div>
+        <div class="row"><label>PASS:</label><input id="login-pass" type="password" spellcheck="false" /></div>
+        <div id="login-err" class="err"></div>
+        <button type="submit" class="os-btn">LOGIN</button>
+        <div class="dim" style="font-size:11px">hint: credentials in README.md</div>
+      </form>
+    </div>
+  </div>
+
+  <div id="terminal" class="hidden">
+    <div class="titlebar">
+      <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+      <span class="title">C:\TERMINAL\OS</span>
+    </div>
+    <div id="screen"></div>
+    <div id="input-line">
+      <span id="prompt"></span>
+      <input id="cmd" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
